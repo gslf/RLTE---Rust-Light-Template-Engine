@@ -16,7 +16,7 @@ use std::collections::HashMap;
 pub fn parser(content: &String, data: &HashMap<String, String>) -> Result<String, Box<dyn Error>>{
    
     // Search for basic template
-    let template_blocks = regex::extract_template_blocks(&content); // TODO change type: is a vector of ParsingBlock
+    let template_blocks = regex::extract_template_blocks(&content);
     
     // TODO Do all the job here
     println!("{:?}", template_blocks); // TODO remove

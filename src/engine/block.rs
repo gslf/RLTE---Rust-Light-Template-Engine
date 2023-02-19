@@ -1,13 +1,19 @@
 /// Categories of available parsing block
-enum ParsingBlockCategory{
+#[derive(Debug, PartialEq)]
+pub enum ParsingBlockCategory{
     Basic,
     Include,
     Condition,
+    ConditionElse,
+    ConditionEnd,
     Iteration,
+    IterationEnd,
 }
 
 // Parsing Block type definition
-struct ParsingBlock{
+#[derive(Debug, PartialEq)]
+pub struct ParsingBlock{
     pub category: ParsingBlockCategory,
-    pub position: isize
+    pub start: usize,
+    pub end: usize
 }
